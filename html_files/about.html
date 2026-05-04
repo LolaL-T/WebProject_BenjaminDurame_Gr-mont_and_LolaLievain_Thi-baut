@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EFREI – About</title>
+  <link rel="stylesheet" href="../css_file/about.css" />
+</head>
+<body class="page">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="content.html">Content</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="Search…" />
+      <button aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <h2 class="section-title">What is this website about ?</h2>
+
+    <div class="about-section">
+
+      <!-- Row 1: Tech icons + description -->
+      <div class="about-row">
+        <div class="tech-logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" />
+        </div>
+        <div class="desc-card">
+          Description of the project.
+        </div>
+      </div>
+
+      <!-- Row 2: Description + image -->
+      <div class="about-row reverse">
+        <div class="desc-card">
+          Description of the project.
+        </div>
+        <img
+          class="about-image"
+          src="https://www.efrei.fr/wp-content/uploads/2022/09/efrei-paris-campus.jpg"
+          alt="EFREI class"
+          onerror="this.outerHTML='<div class=\'about-image-placeholder\'>Image du cours</div>'"
+        />
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
+    <div class="footer-col">
+      <h4>Campus Paris :</h4>
+      <p>+33 188 289 001</p>
+      <p>admissions@efrei.fr</p>
+      <p>30-32 Av. de la République, 94800 Villejuif</p>
+    </div>
+    <div class="footer-col">
+      <h4>Campus Bordeaux:</h4>
+      <p>+33 582 060 162</p>
+      <p>admissions@efrei.fr</p>
+      <p>83 Rue Lucien Faure, 33000</p>
+    </div>
+  </footer>
+
+</body>
+</html>

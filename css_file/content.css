@@ -1,0 +1,100 @@
+@import url('./styles.css');
+
+/* Content page */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  background: rgba(255,255,255,.07);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+
+.schedule-col { border-right: 1px solid var(--card-border); min-height: 480px; }
+.schedule-col:last-child { border-right: none; }
+
+.day-header {
+  background: rgba(255,255,255,.12);
+  text-align: center;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-main);
+}
+
+.day-body {
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: relative;
+  height: calc(100% - 46px);
+}
+
+.course-card {
+  background: rgba(255,255,255,.13);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 13px;
+  font-size: 13px;
+  backdrop-filter: blur(6px);
+  transition: transform .2s, background .2s;
+}
+.course-card:hover { transform: scale(1.02); background: rgba(255,255,255,.2); }
+.course-card .course-name { font-weight: 500; margin-bottom: 2px; color: var(--text-main); }
+.course-card .course-room { color: var(--text-muted); font-size: 12px; }
+
+.slot-top { margin-top: 8px; }
+.slot-mid { margin-top: 64px; }
+.slot-bottom { margin-top: 128px; }
+
+.past-projects-section { margin-bottom: 48px; }
+.office-hours-section { margin-bottom: 64px; }
+
+.proj-carousel-wrap { position: relative; width: 88%; margin: 0 auto; }
+.proj-carousel-track { border-radius: 14px; overflow: hidden; }
+.proj-carousel-track img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+.proj-carousel-track .proj-placeholder {
+  width: 100%;
+  height: 300px;
+  background: rgba(201,127,201,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 18px;
+  font-style: italic;
+}
+/* ── CAROUSEL ── */
+
+.proj-carousel-all { position: relative; width: 88%; margin: 0 auto; }
+.proj-carousel-and-buttons { overflow: hidden; border-radius: 14px; }
+.proj-carousel-and-buttons img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.proj-carousel-and-buttons .proj-placeholder {
+  width: 100%; height: 300px;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 16px;
+}
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.15); border: 1px solid var(--card-border);
+  backdrop-filter: blur(6px);
+  color: var(--text-main); font-size: 22px;
+  width: 40px; height: 40px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.carousel-btn:hover { background: rgba(255,255,255,.28); }
+.carousel-btn.prev { left: -50px; }
+.carousel-btn.next { right: -50px; }

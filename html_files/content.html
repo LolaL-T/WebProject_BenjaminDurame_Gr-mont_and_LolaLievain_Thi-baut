@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EFREI – Content</title>
+  <link rel="stylesheet" href="../css_file/content.css" />
+</head>
+<body class="page">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="content.html" class="active">Content</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="Search…" />
+      <button aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Office Hours -->
+    <section class="office-hours-section">
+      <h2 class="section-title">Office Hours:</h2>
+
+      <div class="schedule-grid">
+
+        <!-- Monday -->
+        <div class="schedule-col">
+          <div class="day-header">Monday</div>
+          <div class="day-body">
+            <div class="course-card slot-top">
+              <div class="course-name">Web Programming</div>
+              <div class="course-room">Salle : H204</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="schedule-col">
+          <div class="day-header">Tuesday</div>
+          <div class="day-body">
+            <div class="course-card slot-bottom">
+              <div class="course-name">Network</div>
+              <div class="course-room">Salle : A206</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="schedule-col">
+          <div class="day-header">Wednesday</div>
+          <div class="day-body">
+            <div class="course-card slot-mid">
+              <div class="course-name">Data Structures</div>
+              <div class="course-room">Salle : H107</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="schedule-col">
+          <div class="day-header">Thursday</div>
+          <div class="day-body">
+            <!-- empty -->
+          </div>
+        </div>
+
+        <!-- Friday -->
+        <div class="schedule-col">
+          <div class="day-header">Friday</div>
+          <div class="day-body">
+            <div class="course-card slot-top">
+              <div class="course-name">Java</div>
+              <div class="course-room">Salle : A205</div>
+            </div>
+            <div class="course-card slot-mid">
+              <div class="course-name">Database</div>
+              <div class="course-room">Salle : B106</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Past Projects -->
+    <section class="past-projects-section">
+      <h2 class="section-title">Past projects:</h2>
+      <div class="proj-carousel-all">
+        <div class="proj-carousel-and-buttons">
+          <div class="proj-placeholder">Project image</div>
+        </div>
+        <button class="carousel-btn prev" onclick="projSlide(-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="projSlide(1)">&#8250;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
+    <div class="footer-col">
+      <h4>Campus Paris :</h4>
+      <p>+33 188 289 001</p>
+      <p>admissions@efrei.fr</p>
+      <p>30-32 Av. de la République, 94800 Villejuif</p>
+    </div>
+    <div class="footer-col">
+      <h4>Campus Bordeaux:</h4>
+      <p>+33 582 060 162</p>
+      <p>admissions@efrei.fr</p>
+      <p>83 Rue Lucien Faure, 33000</p>
+    </div>
+  </footer>
+
+  <script src="../js_file/content.js"></script>
+</body>
+</html>

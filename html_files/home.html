@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EFREI – Home</title>
+  <link rel="stylesheet" href="../css_file/home.css" />
+</head>
+<body class="page">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="content.html">Content</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="Search…" />
+      <button aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Carousel -->
+    <section class="carousel-section">
+      <div class="carousel-all">
+        <div class="carousel-and-buttons">
+          <img id="carousel-image" src="../Image_files/image_cours_1.jpg" alt="EFREI campus 1" />
+        </div>
+        <button class="carousel-btn prev" onclick="slide(-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="slide(1)">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- Who we are -->
+     
+    <section class="who-section">
+      <h2 class="section-title">Who we are</h2>
+      <div class="who-grid">
+        <div class="home-card">
+          <span class="card-label">About us</span>
+        </div>
+        <div class="home-card">
+          <span class="card-label">Our mission</span>
+        </div>
+        <div class="home-card">
+          <span class="card-label">Our values</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../Image_files/black efrei logo.png" alt="EFREI" onerror="this.style.display='none'" />
+    <div class="footer-col">
+      <h4>Campus Paris :</h4>
+      <p>+33 188 289 001</p>
+      <p>admissions@efrei.fr</p>
+      <p>30-32 Av. de la République, 94800 Villejuif</p>
+    </div>
+    <div class="footer-col">
+      <h4>Campus Bordeaux:</h4>
+      <p>+33 582 060 162</p>
+      <p>admissions@efrei.fr</p>
+      <p>83 Rue Lucien Faure, 33000</p>
+    </div>
+  </footer>
+
+  <script src="../js_file/home.js"></script>
+</body>
+</html>

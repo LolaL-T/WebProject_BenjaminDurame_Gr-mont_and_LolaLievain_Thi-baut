@@ -1,0 +1,62 @@
+@import url('./styles.css');
+
+/* About page */
+.about-section { display: flex; flex-direction: column; gap: 64px; }
+
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.about-row.reverse { flex-direction: row-reverse; }
+
+.tech-logos {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.tech-logos img {
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+  transition: transform .25s;
+}
+.tech-logos img:hover { transform: translateY(-4px) scale(1.05); }
+
+.desc-card {
+  flex: 1;
+  background: rgba(255,255,255,.12);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 32px 40px;
+  min-height: 200px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 240px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+.about-image-placeholder {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 240px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
