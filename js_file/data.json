@@ -39,7 +39,7 @@
       "hour": "10:00 - 11:30",
       "room": "H204",
       "teacher": "Amir chachoui",
-      "teamsLink": "https://teams.microsoft.com/l/meetup-join/xyz"
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/a"
     },
     {
       "name": "Network",
@@ -47,7 +47,7 @@
       "hour": "14:00 - 15:30",
       "room": "A206",
       "teacher": "Kais Klai",
-      "teamsLink": "https://teams.microsoft.com/l/meetup-join/abc"
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/b"
     },
     {
       "name": "Data Structures",
@@ -55,7 +55,7 @@
       "hour": "09:00 - 10:30",
       "room": "H107",
       "teacher": "Asma Gabis",
-      "teamsLink": "https://teams.microsoft.com/l/meetup-join/def"
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/c"
     },
     {
       "name": "Java",
@@ -63,7 +63,7 @@
       "hour": "11:00 - 12:30",
       "room": "A205",
       "teacher": "Kais Klai",
-      "teamsLink": "https://teams.microsoft.com/l/meetup-join/ghi"
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/d"
     },
     {
       "name": "Database",
@@ -71,7 +71,7 @@
       "hour": "13:30 - 15:00",
       "room": "B106",
       "teacher": "Amir Chachoui",
-      "teamsLink": "https://teams.microsoft.com/l/meetup-join/jkl"
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/e"
     }
   ]
 }
