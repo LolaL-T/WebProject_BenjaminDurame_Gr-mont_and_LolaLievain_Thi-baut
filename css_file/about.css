@@ -1,14 +1,14 @@
 @import url('./styles.css');
 
 /* About page */
-.about-section { display: flex; flex-direction: column; gap: 64px; }
+.about { display: flex; flex-direction: column; gap: 64px; }
 
-.about-row {
+.row {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.about-row.reverse { flex-direction: row-reverse; }
+.row.reverse { flex-direction: row-reverse; }
 
 .tech-logos {
   flex: 0 0 auto;
@@ -19,27 +19,25 @@
 .tech-logos img {
   height: 90px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
   transition: transform .25s;
 }
 .tech-logos img:hover { transform: translateY(-4px) scale(1.05); }
 
-.desc-card {
+.card {
   flex: 1;
-  background: rgba(255,255,255,.12);
-  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 16px;
-  backdrop-filter: blur(10px);
   padding: 32px 40px;
   min-height: 200px;
-  color: var(--text-muted);
+  color: rgba(200,220,255,0.65);
   font-size: 15px;
   line-height: 28px;
   display: flex;
   align-items: center;
 }
 
-.about-image {
+.image {
   flex: 0 0 auto;
   width: 320px;
   height: 240px;
@@ -47,16 +45,17 @@
   object-fit: cover;
   box-shadow: 0 12px 40px rgba(0,0,0,.35);
 }
-.about-image-placeholder {
+.about-image-placeholder,
+.image-placeholder {
   flex: 0 0 auto;
   width: 320px;
   height: 240px;
   border-radius: 16px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: rgba(200,220,255,0.65);
   font-size: 14px;
 }

@@ -1,18 +1,17 @@
 @import url('./styles.css');
 
 /* Team page */
-.team-grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 380px));
   gap: 29px;
   margin-top: 16px;
 }
 
-.profile-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+.profile {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 18px;
-  backdrop-filter: blur(8px);
   padding: 32px 29px 29px;
   display: flex;
   flex-direction: column;
@@ -20,35 +19,34 @@
   gap: 0;
   transition: transform .3s, box-shadow .3s;
 }
-.profile-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.28); }
+.profile:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.28); }
 
-.profile-avatar-wrap {
+.avatar-wrap {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
 }
-.profile-avatar {
+.avatar img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
   object-fit: contain;
-  border: 3px solid var(--card-border);
-  background: rgba(255,255,255,.1);
+  border: 3px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.1);
 }
-.profile-avatar-placeholder {
+.avatar {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: rgba(255,255,255,.12);
-  border: 3px solid var(--card-border);
+  background: rgba(255,255,255,0.12);
+  border: 3px solid rgba(255,255,255,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: rgba(200,220,255,0.65);
   overflow: hidden;
 }
-
 
 .profile-name {
   font-family: 'Cormorant Garamond', serif;

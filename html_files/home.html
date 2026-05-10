@@ -10,16 +10,16 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">
+    <div class="logo">
       <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
     </div>
-    <ul class="nav-links">
+    <ul class="nav">
       <li><a href="home.html" class="active">Home</a></li>
       <li><a href="content.html">Content</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
-    <div class="nav-search">
+    <div class="search">
       <input type="text" placeholder="Search…" />
       <button aria-label="Search">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -33,24 +33,24 @@
   <main>
 
     <!-- Carousel -->
-    <section class="carousel-section">
+    <section class="carousel">
       <div class="carousel-all">
-        <div class="carousel-and-buttons">
+        <div class="carousel-controls">
           <img id="carousel-image" src="../Image_files/image_cours_1.jpg" alt="EFREI campus 1" />
         </div>
-        <button class="carousel-btn prev" onclick="slide(-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="slide(1)">&#8250;</button>
+        <button class="btn prev" onclick="slide(-1)">&#8249;</button>
+        <button class="btn next" onclick="slide(1)">&#8250;</button>
       </div>
     </section>
 
     <!-- Who we are -->
      
-    <section class="who-section">
-      <h2 class="section-title">Who we are</h2>
-      <div class="who-grid">
-        <div class="home-card">
-          <span class="card-label">About us</span>
-          <span class="card-label"></span>
+    <section class="who">
+      <h2 class="title">Who we are</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="label">About us</span>
+          <span class="label"></span>
           <p>
               We are the Computer Science Departement at Efrei ! We 
               create all courses, accompany students in their learning, and concieve
@@ -58,17 +58,17 @@
                to ensure students are in the best learning environment possible to learn and ask questions.
           </p>
         </div>
-        <div class="home-card">
-          <span class="card-label">Our mission</span>
+        <div class="card">
+          <span class="label">Our mission</span>
           <p> 
             Our goal is to help our students reach their learning goals and
             develop their skills to become ressourceful engineers. With the help of our expert
-            teachers and ressources given by Efrei, such as the <a>JetBrains tools</a>; and <a>Github Education</a>,
+            teachers and ressources given by Efrei, such as the <a class="home-link" href="https://www.jetbrains.com/">JetBrains tools</a> and <a class="home-link" href="https://education.github.com/">Github Education</a>,
             our students are given all the tools they need to succeed.
           </p>
         </div>
-        <div class="home-card">
-          <span class="card-label">Our values</span>
+        <div class="card">
+          <span class="label">Our values</span>
           <p>
             We want our engineers to be the best they can be, which is why we teach them core values to help them navigate in the real world, such as :
             <ul>
@@ -89,13 +89,13 @@
   <!-- FOOTER -->
   <footer>
     <img src="../Image_files/black efrei logo.png" alt="EFREI" onerror="this.style.display='none'" />
-    <div class="footer-col">
+    <div class="footer-block">
       <h4>Campus Paris :</h4>
       <p>+33 188 289 001</p>
       <p>admissions@efrei.fr</p>
       <p>30-32 Av. de la République, 94800 Villejuif</p>
     </div>
-    <div class="footer-col">
+    <div class="footer-block">
       <h4>Campus Bordeaux:</h4>
       <p>+33 582 060 162</p>
       <p>admissions@efrei.fr</p>

@@ -10,16 +10,16 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">
+    <div class="logo">
       <img src="../Image_files/black efrei logo.png" alt="EFREI" style="margin-left: 40px;" />
     </div>
-    <ul class="nav-links">
+    <ul class="nav">
       <li><a href="home.html">Home</a></li>
       <li><a href="content.html" class="active">Content</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
-    <div class="nav-search">
+    <div class="search">
       <input type="text" placeholder="Search…" />
       <button aria-label="Search">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -34,41 +34,26 @@
 
     <!-- Office Hours -->
     <section class="office-hours-section">
-      <h2 class="section-title">Office Hours:</h2>
+      <h2 class="title">Office Hours:</h2>
 
       <div class="schedule-grid">
 
         <!-- Monday -->
         <div class="schedule-col">
           <div class="day-header">Monday</div>
-          <div class="day-body">
-            <div class="course-card slot-top">
-              <div class="course-name">Web Programming</div>
-              <div class="course-room">Salle : H204</div>
-            </div>
-          </div>
+          <div class="day-body"></div>
         </div>
 
         <!-- Tuesday -->
         <div class="schedule-col">
           <div class="day-header">Tuesday</div>
-          <div class="day-body">
-            <div class="course-card slot-bottom">
-              <div class="course-name">Network</div>
-              <div class="course-room">Salle : A206</div>
-            </div>
-          </div>
+          <div class="day-body"></div>
         </div>
 
         <!-- Wednesday -->
         <div class="schedule-col">
           <div class="day-header">Wednesday</div>
-          <div class="day-body">
-            <div class="course-card slot-mid">
-              <div class="course-name">Data Structures</div>
-              <div class="course-room">Salle : H107</div>
-            </div>
-          </div>
+          <div class="day-body"></div>
         </div>
 
         <!-- Thursday -->
@@ -82,30 +67,23 @@
         <!-- Friday -->
         <div class="schedule-col">
           <div class="day-header">Friday</div>
-          <div class="day-body">
-            <div class="course-card slot-top">
-              <div class="course-name">Java</div>
-              <div class="course-room">Salle : A205</div>
-            </div>
-            <div class="course-card slot-mid">
-              <div class="course-name">Database</div>
-              <div class="course-room">Salle : B106</div>
-            </div>
-          </div>
+          <div class="day-body"></div>
         </div>
 
       </div>
     </section>
 
     <!-- Past Projects -->
-    <section class="past-projects-section">
-      <h2 class="section-title">Past projects:</h2>
-      <div class="proj-carousel-all">
-        <div class="proj-carousel-and-buttons">
-          <div class="proj-placeholder">Project image</div>
+    <section class="pastprojects">
+      <h2 class="title">Past projects:</h2>
+      <div class="project-carousel">
+        <div class="project-carousel-box">
+          <div class="project-track">
+            <img id="project-image" src="../Image_files/Markov_image.png" alt="Project 1" />
+          </div>
         </div>
-        <button class="carousel-btn prev" onclick="projSlide(-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="projSlide(1)">&#8250;</button>
+        <button class="btn prev" onclick="projectSlide(-1)">&#8249;</button>
+        <button class="btn next" onclick="projectSlide(1)">&#8250;</button>
       </div>
     </section>
 
@@ -128,6 +106,30 @@
       <p>83 Rue Lucien Faure, 33000</p>
     </div>
   </footer>
+
+  <div class="popup-project" id="popup-project" aria-hidden="true">
+    <div class="popup-backdrop" id="popup-project-backdrop"></div>
+    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-project-title">
+      <button class="popup-close" id="popup-project-close" aria-label="Close popup">&times;</button>
+      <h3 id="popup-project-title">Project title</h3>
+      <div id="popup-project-description" class="popup-project-description"></div>
+    </div>
+  </div>
+
+  <div class="popup-course" id="popup-course" aria-hidden="true">
+    <div class="popup-backdrop" id="popup-course-backdrop"></div>
+    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-course-title">
+      <button class="popup-close" id="popup-course-close" aria-label="Close popup">&times;</button>
+      <div class="course-popup-header">
+        <h3 id="popup-course-title"></h3>
+        <div id="popup-course-time" class="course-popup-time"></div>
+      </div>
+      <div id="popup-course-date" class="course-popup-date"></div>
+      <div id="popup-course-room" class="course-popup-room"></div>
+      <div id="popup-course-teacher" class="course-popup-teacher"></div>
+      <a id="popup-course-teams" href="#" class="course-popup-teams" target="_blank" rel="noopener noreferrer">Join Teams Meeting</a>
+    </div>
+  </div>
 
   <script src="../js_file/content.js"></script>
 </body>

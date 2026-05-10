@@ -5,96 +5,363 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
-  background: rgba(255,255,255,.07);
-  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 64px;
 }
 
-.schedule-col { border-right: 1px solid var(--card-border); min-height: 480px; }
+.schedule-col { 
+  border-right: 1px solid rgba(255, 255, 255, 0.2); 
+  min-height: 480px; 
+}
 .schedule-col:last-child { border-right: none; }
 
 .day-header {
-  background: rgba(255,255,255,.12);
+  background: rgba(255, 255, 255, 0.12);
   text-align: center;
   padding: 14px 0;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1.6px;
+  font-weight: 600;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--card-border);
-  color: var(--text-main);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 .day-body {
   padding: 13px;
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
+  display: block;
   position: relative;
   height: calc(100% - 46px);
+  min-height: 480px;
 }
 
 .course-card {
-  background: rgba(255,255,255,.13);
-  border: 1px solid var(--card-border);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 10px 13px;
   font-size: 13px;
-  backdrop-filter: blur(6px);
-  transition: transform .2s, background .2s;
+  transition: transform 0.2s, background 0.2s;
+  cursor: pointer;
+  left: 13px;
+  right: 13px;
+  width: calc(100% - 26px);
+  min-height: 50px;
 }
-.course-card:hover { transform: scale(1.02); background: rgba(255,255,255,.2); }
-.course-card .course-name { font-weight: 500; margin-bottom: 2px; color: var(--text-main); }
-.course-card .course-room { color: var(--text-muted); font-size: 12px; }
+.course-card:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+}
+.course-card .course-name {
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #fff;
+}
+.course-card .course-room {
+  color: #aaa;
+  font-size: 12px;
+}
 
-.slot-top { margin-top: 8px; }
-.slot-mid { margin-top: 64px; }
-.slot-bottom { margin-top: 128px; }
+.btn {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; 
+  font-size: 24px;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { 
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.1);
+}
 
-.past-projects-section { margin-bottom: 48px; }
+.btn.prev { left: -50px; }
+.btn.next { right: -50px; }
+
+.pastprojects{ margin-bottom: 48px; }
 .office-hours-section { margin-bottom: 64px; }
 
-.proj-carousel-wrap { position: relative; width: 88%; margin: 0 auto; }
-.proj-carousel-track { border-radius: 14px; overflow: hidden; }
-.proj-carousel-track img {
+/* Carousel */
+.project-carousel { position: relative; width: 100%; margin: 0 auto; }
+
+.project-carousel-box { 
+  overflow: hidden; 
+  border-radius: 14px; 
+  display: flex;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
+  height: 400px;
 }
-.proj-carousel-track .proj-placeholder {
+.project-track {
+  display: flex;
   width: 100%;
-  height: 300px;
-  background: rgba(201,127,201,.25);
+  height: 100%;
+}
+.project-track img { 
+  width: 100%; 
+  height: 400px; 
+  object-fit: cover; 
+  display: block;
+  flex-shrink: 0;
+  transition: transform 1200ms ease-in-out;
+  cursor: pointer;
+}
+
+.project-carousel-box .project-placeholder {
+  width: 100%; 
+  height: 400px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  color: #aaa; 
+  font-size: 16px;
+}
+
+.btn {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; 
+  font-size: 24px;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover { 
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn.prev { left: -50px; }
+.btn.next { right: -50px; }
+
+/* Popup modal */
+.popup-project {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-project.is-open {
+  display: flex;
+}
+
+.popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+  position: relative;
+  z-index: 1;
+  width: min(520px, calc(100% - 32px));
+  background: rgba(20, 30, 70, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.popup-content h3 {
+  margin: 0 40px 12px 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.popup-project-description {
+  margin: 0;
+  color: #aaa;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.popup-content a {
+  color: #6db3ff;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.popup-content a:hover {
+  color: #fff;
+}
+
+.popup-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.15);
+}
+
+.popup-pdfs {
+  margin-top: 16px;
+}
+
+.popup-pdfs p {
+  margin: 0 0 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.popup-pdfs ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.popup-pdfs li {
+  margin: 6px 0;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.popup-pdfs li:hover {
+  color: #fff;
+}
+.popup-course {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.popup-course.show {
+  display: flex;
+}
+
+.popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+  position: relative;
+  background: rgba(30, 30, 35, 0.95);
+  width: min(520px, calc(100% - 32px));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 24px;
+  color: #fff;
+}
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  font-size: 18px;
-  font-style: italic;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border-radius: 50%;
 }
-/* ── CAROUSEL ── */
 
-.proj-carousel-all { position: relative; width: 88%; margin: 0 auto; }
-.proj-carousel-and-buttons { overflow: hidden; border-radius: 14px; }
-.proj-carousel-and-buttons img { width: 100%; height: 300px; object-fit: cover; display: block; }
-.proj-carousel-and-buttons .proj-placeholder {
-  width: 100%; height: 300px;
-  background: rgba(255,255,255,0.08);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-muted); font-size: 16px;
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.15);
 }
-.carousel-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,.15); border: 1px solid var(--card-border);
-  backdrop-filter: blur(6px);
-  color: var(--text-main); font-size: 22px;
-  width: 40px; height: 40px; border-radius: 50%;
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  transition: background .2s;
+
+.course-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-.carousel-btn:hover { background: rgba(255,255,255,.28); }
-.carousel-btn.prev { left: -50px; }
-.carousel-btn.next { right: -50px; }
+
+.course-popup-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.course-popup-time {
+  font-size: 14px;
+  color: #aaa;
+  min-width: fit-content;
+  padding-right: 25px;
+}
+
+.course-popup-date {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.course-popup-room {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.course-popup-teacher {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.course-popup-teams {
+  display: inline-block;
+  background: rgba(0, 120, 215, 0.9);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.course-popup-teams:hover {
+  background: rgba(0, 120, 215, 1);
+  transform: translateY(-2px);
+}

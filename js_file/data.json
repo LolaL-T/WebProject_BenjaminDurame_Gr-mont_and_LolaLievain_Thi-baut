@@ -1,0 +1,77 @@
+{
+  "homeCarousel": [
+    {
+      "src": "../Image_files/image_cours_1.jpg",
+      "alt": "EFREI campus 1"
+    },
+    {
+      "src": "../Image_files/image_cours_2.jpg",
+      "alt": "EFREI campus 2"
+    }
+  ],
+  "projectCarousel": [
+    {
+      "src": "../Image_files/Markov_image.png",
+      "alt": "EFREI campus 1",
+      "title": "Markov Project",
+      "description": "A project focused on Markov chains and probabilistic modeling, with a visual interface to explore state transitions and prediction behavior.",
+      "pdfs": [
+        { "label": "Doc cadrage EN", "href": "../doc_cadrage_EN.pdf" },
+        { "label": "Sujet partie 1 EN", "href": "../sujet_partie1_EN.pdf" },
+        { "label": "Sujet partie 2 EN", "href": "../sujet_partie2_EN.pdf" },
+        { "label": "Sujet partie 3 EN", "href": "../sujet_partie_3_EN.pdf" }
+      ]
+    },
+    {
+      "src": "../Image_files/db_image.png",
+      "alt": "EFREI campus 2",
+      "title": "Database Project",
+      "description": "A database-centered project exploring schema design, queries, and data organization for a structured information system.",
+      "pdfs": [
+        { "label": "Mini Project 2 EN", "href": "../Mini_Project2_EN.pdf" }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "name": "Web Programming",
+      "date": "Monday",
+      "hour": "10:00 - 11:30",
+      "room": "H204",
+      "teacher": "Amir chachoui",
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/xyz"
+    },
+    {
+      "name": "Network",
+      "date": "Tuesday",
+      "hour": "14:00 - 15:30",
+      "room": "A206",
+      "teacher": "Kais Klai",
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/abc"
+    },
+    {
+      "name": "Data Structures",
+      "date": "Wednesday",
+      "hour": "09:00 - 10:30",
+      "room": "H107",
+      "teacher": "Asma Gabis",
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/def"
+    },
+    {
+      "name": "Java",
+      "date": "Friday",
+      "hour": "11:00 - 12:30",
+      "room": "A205",
+      "teacher": "Kais Klai",
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/ghi"
+    },
+    {
+      "name": "Database",
+      "date": "Friday",
+      "hour": "13:30 - 15:00",
+      "room": "B106",
+      "teacher": "Amir Chachoui",
+      "teamsLink": "https://teams.microsoft.com/l/meetup-join/jkl"
+    }
+  ]
+}
