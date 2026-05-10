@@ -27,10 +27,10 @@
 
 .who { margin-bottom: 48px; }
 
-.link {
+.home-link{
   color: #ffffff;
 }
-.link:hover {
+.home-link:hover {
   color: #0a1628;
   text-decoration: underline;
 }
