@@ -89,8 +89,6 @@
 .team_link:hover {
     color: #000000;
 }
-
-/* Keep team cards the original size (380px) and make them equal-sized horizontally on wide screens */
 @media (min-width: 900px) {
   .grid {
     display: flex;
@@ -101,7 +99,6 @@
     padding-bottom: 12px;
     align-items: stretch;
   }
-  /* Ensure both profile and generic card keep exact size and equal height */
   .grid > .profile,
   .grid > .card {
     flex: 0 0 380px;
@@ -112,14 +109,12 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-  /* Make inner profile content stretch to match height so cards look equal */
   .grid > .profile .profile-infos,
   .grid > .card .profile-infos {
     flex: 1 1 auto;
   }
 }
 
-/* On small screens, keep stacked layout */
 @media (max-width: 899px) {
   .grid {
     display: grid;

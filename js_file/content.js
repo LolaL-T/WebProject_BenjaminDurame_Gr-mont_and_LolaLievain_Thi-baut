@@ -33,7 +33,6 @@
         coursesData = data.courses;
         generateCourseCards();
       })
-      .catch(err => console.error('Error loading data:', err));
 
     function generateCourseCards() {
       const scheduleGrid = document.querySelector('.schedule-grid');

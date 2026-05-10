@@ -11,7 +11,6 @@
       .then(data => {
         carouselData = data.homeCarousel;
       })
-      .catch(err => console.error('Error loading carousel data:', err));
 
     function slide(dir) {
       if (isAnimating || carouselData.length === 0) return;
